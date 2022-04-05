@@ -4,14 +4,14 @@ from .urdf_parser_py import urdf
 
 import PyKDL as kdl
 
-def treeFromFile(filename):
+def treeFromFile(filename, quiet=False):
     """
     Construct a PyKDL.Tree from an URDF file.
     :param filename: URDF file path
     """
 
     with open(filename) as urdf_file:
-        return treeFromUrdfModel(urdf.URDF.from_xml_string(urdf_file.read()))
+        return treeFromUrdfModel(urdf.URDF.from_xml_string(urdf_file.read()), quiet=quiet)
 
 def treeFromParam(param):
     """
