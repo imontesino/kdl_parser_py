@@ -11,7 +11,6 @@ README = (HERE / "README.md").read_text()
 
 package_name = 'kdl_parser_py'
 
-
 # This call to setup() does all the work
 setup(
     name=package_name,
@@ -26,7 +25,6 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
     ],
-    install_requires=['setuptools'],
     zip_safe=True,
     maintainer='ignamonte',
     maintainer_email='monte.igna@gmail.com',
@@ -35,6 +33,7 @@ setup(
     license="BSD",
     install_requires=[
         #"PyKDL>=1.4.0",
+        "setuptools",
         "PyYAML>=5.02",
         "setuptools>=45.2.0"
     ],
