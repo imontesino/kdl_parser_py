@@ -101,7 +101,7 @@ def _add_children_to_tree(robot_model, root, tree):
         if not _add_children_to_tree(robot_model, child, tree):
             return False
 
-    return True;
+    return True
 
 def treeFromUrdfModel(robot_model, quiet=False):
     """

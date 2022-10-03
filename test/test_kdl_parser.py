@@ -3,7 +3,7 @@
 import os
 import sys
 
-import kdl_parser.urdf
+import kdl_parser_py.urdf
 import unittest
 
 PKG = "kdl_parser_py"
@@ -16,7 +16,7 @@ os.chdir(dname)
 class TestKdlParser(unittest.TestCase):
     def runTest(self):
         filename = "test.urdf"
-        (ok, tree) = kdl_parser.urdf.treeFromFile(filename)
+        (ok, tree) = kdl_parser_py.urdf.treeFromFile(filename)
         self.assertTrue(ok)
         # KDL doesn't count fixed joints (since they aren't kinematic)
         self.assertEqual(tree.getNrOfJoints(), 8)
