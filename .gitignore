@@ -1,2 +1,46 @@
 # vscode
 .vscode
+
+# vscode
+
+.vscode
+.devcontainer
+
+# Python
+
+## Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+## Typings
+*.pyi
+typings/
+
+## C extensions
+*.so
+
+## Numpy
+*.npy
+*.npz
+
+# CMake
+build/
+
+# saved data
+*.csv
+*.pkl
+
+pybind11/
+
+# Sphinx documentation
+docs/_build/
+
+# ROS 2
+
+log/*
+install/+
+
+# Github Token
+.env
+
