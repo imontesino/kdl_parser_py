@@ -7,7 +7,10 @@ from setuptools import setup, find_packages
 HERE = pathlib.Path(__file__).parent
 
 # The text of the README file
-README = (HERE / "README.md").read_text()
+try:
+    README = (HERE / "README.md").read_text()
+except FileNotFoundError:  # symlink install
+    README = "Personal kdl_parser_py and ursdf_parser_py without ROS dependency."
 
 package_name = 'kdl_parser_py'
 
